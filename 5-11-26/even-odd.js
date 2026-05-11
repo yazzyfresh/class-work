@@ -5,10 +5,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question("Enter a number: ", function (input) {
-  let num = Number(input);
+rl.question("Enter a number: ", (input) => {
+  const num = Number(input);
 
-  if (num % 2 === 0) {
+  if (isNaN(num)) {
+    console.log("That's not a number!");
+  } else if (num % 2 === 0) {
     console.log(num + " is even");
   } else {
     console.log(num + " is odd");
