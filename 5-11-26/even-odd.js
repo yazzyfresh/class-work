@@ -17,4 +17,5 @@ rl.question("Enter a number: ", (input) => {
   }
 
   rl.close();
+  
 });
